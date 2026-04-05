@@ -14,16 +14,20 @@ const TIERS = [
     cta: "Get Started",
     highlight: false,
     features: [
-      { label: "3 symbols (BTC, XAU, EUR/USD)", included: true },
-      { label: "All timeframes", included: true },
-      { label: "All drawing tools & indicators", included: true },
-      { label: "AI Analysis (3 symbols, M15)", included: true },
-      { label: "Demo mode only", included: true },
-      { label: "3 active alerts", included: true },
-      { label: "MT5 Bridge", included: false },
-      { label: "AI Chat", included: false },
-      { label: "Live trading", included: false },
-      { label: "Push notifications", included: false },
+      { label: "Symbols", value: "3 (BTC, XAU, EUR/USD)" },
+      { label: "Mode", value: "Demo only" },
+      { label: "MT5 Bridge", value: CROSS },
+      { label: "Indicators / chart", value: "2" },
+      { label: "Saved drawings", value: "5" },
+      { label: "Active alerts", value: "3" },
+      { label: "Scheduler slots", value: CROSS },
+      { label: "AI Credits / mo", value: "10 (one-time)" },
+      { label: "AI Analysis", value: "3 symbols" },
+      { label: "Custom strategy", value: CROSS },
+      { label: "AI Chat", value: CROSS },
+      { label: "Candle history", value: "2,000" },
+      { label: "Push notifications", value: CROSS },
+      { label: "Support", value: "Community" },
     ],
   },
   {
@@ -35,16 +39,20 @@ const TIERS = [
     cta: "Subscribe",
     highlight: false,
     features: [
-      { label: "All symbols", included: true },
-      { label: "All timeframes", included: true },
-      { label: "All drawing tools & indicators", included: true },
-      { label: "AI Analysis (all symbols, M15)", included: true },
-      { label: "Live + Demo mode", included: true },
-      { label: "20 active alerts", included: true },
-      { label: "MT5 Bridge", included: true },
-      { label: "AI Chat", included: true },
-      { label: "Live trading", included: true },
-      { label: "Push notifications", included: true },
+      { label: "Symbols", value: "All" },
+      { label: "Mode", value: "Live + Demo" },
+      { label: "MT5 Bridge", value: CHECK },
+      { label: "Indicators / chart", value: "5" },
+      { label: "Saved drawings", value: "20" },
+      { label: "Active alerts", value: "20" },
+      { label: "Scheduler slots", value: "2" },
+      { label: "AI Credits / mo", value: "15" },
+      { label: "AI Analysis", value: "All symbols" },
+      { label: "Custom strategy", value: CROSS },
+      { label: "AI Chat", value: CHECK },
+      { label: "Candle history", value: "5,000" },
+      { label: "Push notifications", value: CHECK },
+      { label: "Support", value: "Email" },
     ],
   },
   {
@@ -56,16 +64,20 @@ const TIERS = [
     cta: "Subscribe",
     highlight: true,
     features: [
-      { label: "All symbols", included: true },
-      { label: "All timeframes", included: true },
-      { label: "All drawing tools & indicators", included: true },
-      { label: "AI Analysis (multi-TF)", included: true },
-      { label: "Live + Demo mode", included: true },
-      { label: "Unlimited alerts", included: true },
-      { label: "MT5 Bridge", included: true },
-      { label: "AI Chat", included: true },
-      { label: "Live trading", included: true },
-      { label: "Scheduler (5 slots)", included: true },
+      { label: "Symbols", value: "All" },
+      { label: "Mode", value: "Live + Demo" },
+      { label: "MT5 Bridge", value: CHECK },
+      { label: "Indicators / chart", value: "15" },
+      { label: "Saved drawings", value: "100" },
+      { label: "Active alerts", value: "100" },
+      { label: "Scheduler slots", value: "10" },
+      { label: "AI Credits / mo", value: "40" },
+      { label: "AI Analysis", value: "All symbols" },
+      { label: "Custom strategy", value: CROSS },
+      { label: "AI Chat", value: CHECK },
+      { label: "Candle history", value: "20,000" },
+      { label: "Push notifications", value: CHECK },
+      { label: "Support", value: "Priority" },
     ],
   },
   {
@@ -77,19 +89,33 @@ const TIERS = [
     cta: "Subscribe",
     highlight: false,
     features: [
-      { label: "All symbols", included: true },
-      { label: "All timeframes", included: true },
-      { label: "All drawing tools & indicators", included: true },
-      { label: "AI Analysis + custom strategy", included: true },
-      { label: "Live + Demo mode", included: true },
-      { label: "Unlimited alerts", included: true },
-      { label: "MT5 Bridge", included: true },
-      { label: "AI Chat (priority)", included: true },
-      { label: "Live trading", included: true },
-      { label: "Scheduler (unlimited)", included: true },
+      { label: "Symbols", value: "All" },
+      { label: "Mode", value: "Live + Demo" },
+      { label: "MT5 Bridge", value: CHECK },
+      { label: "Indicators / chart", value: "Unlimited" },
+      { label: "Saved drawings", value: "Unlimited" },
+      { label: "Active alerts", value: "Unlimited" },
+      { label: "Scheduler slots", value: "Unlimited" },
+      { label: "AI Credits / mo", value: "Unlimited" },
+      { label: "AI Analysis", value: "All symbols" },
+      { label: "Custom strategy", value: CHECK },
+      { label: "AI Chat", value: "Priority" },
+      { label: "Candle history", value: "Unlimited" },
+      { label: "Push notifications", value: CHECK },
+      { label: "Support", value: "Dedicated" },
     ],
   },
 ];
+
+function FeatureValue({ value }: { value: string }) {
+  if (value === CHECK) return <span className="text-jade font-bold">{CHECK}</span>;
+  if (value === CROSS) return <span className="text-mist/30">{CROSS}</span>;
+  if (value === "Unlimited" || value === "Priority" || value === "Dedicated")
+    return <span className="text-gold font-semibold text-xs">{value}</span>;
+  if (value === "All" || value === "All symbols")
+    return <span className="text-snow/90 text-xs">{value}</span>;
+  return <span className="text-snow/70 text-xs">{value}</span>;
+}
 
 export function Pricing() {
   return (
@@ -134,23 +160,14 @@ export function Pricing() {
                   {tier.credits}
                 </p>
 
-                <ul className="space-y-2.5 flex-1 mb-6">
+                <ul className="space-y-2 flex-1 mb-6">
                   {tier.features.map((f) => (
-                    <li key={f.label} className="flex items-start gap-2 text-xs">
-                      <span
-                        className={`shrink-0 mt-0.5 ${
-                          f.included ? "text-jade" : "text-mist/40"
-                        }`}
-                      >
-                        {f.included ? CHECK : CROSS}
-                      </span>
-                      <span
-                        className={
-                          f.included ? "text-snow/80" : "text-mist/40"
-                        }
-                      >
-                        {f.label}
-                      </span>
+                    <li
+                      key={f.label}
+                      className="flex items-center justify-between gap-2 text-xs py-0.5"
+                    >
+                      <span className="text-mist">{f.label}</span>
+                      <FeatureValue value={f.value} />
                     </li>
                   ))}
                 </ul>
