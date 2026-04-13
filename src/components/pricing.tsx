@@ -135,7 +135,7 @@ export function Pricing() {
           {TIERS.map((tier) => (
             <Card
               key={tier.name}
-              className={`relative bg-ink2 flex flex-col ${
+              className={`relative overflow-visible bg-ink2 flex flex-col ${
                 tier.highlight
                   ? "border-gold/40 shadow-[0_0_30px_rgba(201,151,58,0.1)]"
                   : "border-rim"
