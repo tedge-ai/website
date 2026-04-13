@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  // No "output: export" — let opennextjs handle SSR on Cloudflare Workers
 };
 
 export default nextConfig;
