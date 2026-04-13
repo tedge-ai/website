@@ -8,11 +8,9 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-6 h-6 rounded-md bg-gold/20 flex items-center justify-center">
-                <span className="text-gold font-bold text-xs">T</span>
-              </div>
+              <img src="/icon.svg" alt="tedge" width={24} height={24} className="rounded-md" />
               <span className="text-sm font-semibold text-snow">
-                Tedge<span className="text-gold">.ai</span>
+                tedge<span className="text-gold">.ai</span>
               </span>
             </div>
             <p className="text-xs text-mist leading-relaxed">
@@ -88,7 +86,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-mist">
-            &copy; {new Date().getFullYear()} Tedge. All rights reserved.
+            &copy; {new Date().getFullYear()} tedge.ai — All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-xs text-mist hover:text-snow transition-colors">

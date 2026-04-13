@@ -1,15 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-rim bg-ink/80 backdrop-blur-xl">
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 h-16">
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg bg-gold/20 flex items-center justify-center">
-            <span className="text-gold font-bold text-sm">T</span>
-          </div>
+          <Image src="/icon.svg" alt="tedge" width={28} height={28} className="rounded-lg" />
           <span className="text-lg font-semibold text-snow tracking-tight">
-            Tedge<span className="text-gold">.ai</span>
+            tedge<span className="text-gold">.ai</span>
           </span>
         </Link>
 
