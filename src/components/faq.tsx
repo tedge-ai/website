@@ -36,7 +36,7 @@ const FAQS = [
   {
     question: "Which brokers are supported?",
     answer:
-      "tEdge works with any MT5 or cTrader broker through our EdgeBridge connector. We\u2019ve tested with IC Markets, BlackBull Markets, OANDA, and Pepperstone. Our analyses use reference market data and are automatically adapted to your broker\u2019s symbol naming. The entry zones are accurate across brokers — typical OHLC differences are negligible on H1/H4 timeframes.",
+      "tedge.ai works with any MT5 or cTrader broker through our EdgeBridge connector. We\u2019ve tested with IC Markets, BlackBull Markets, OANDA, and Pepperstone. Our analyses use reference market data and are automatically adapted to your broker\u2019s symbol naming. The entry zones are accurate across brokers — typical OHLC differences are negligible on H1/H4 timeframes.",
   },
   {
     question: "Why do analyses use reference data instead of my broker\u2019s data?",
@@ -44,7 +44,7 @@ const FAQS = [
       "By using a single reference data source, we can run each analysis once and serve it to all users regardless of their broker. This mutualisation is what allows us to include 3 major analyses for free. The price differences between brokers on H1/H4 timeframes are typically 1-3 pips — negligible compared to the 15-50+ pip zones our AI identifies. We recommend accounting for your broker\u2019s spread when placing entries.",
   },
   {
-    question: "Can I use tEdge with a demo account?",
+    question: "Can I use tedge.ai with a demo account?",
     answer:
       "Yes! The Free plan is demo-only, which is perfect for evaluating the platform. You get full access to AI analyses on 3 major pairs, Market Structure, and the charting tools. When you\u2019re ready to trade live, upgrade to Starter or above to connect your broker.",
   },
@@ -71,7 +71,7 @@ export function FAQ() {
             Frequently asked questions
           </h2>
           <p className="text-mist text-lg">
-            Everything you need to know about tEdge AI.
+            Everything you need to know about tedge.ai AI.
           </p>
         </div>
 

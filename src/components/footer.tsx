@@ -84,6 +84,24 @@ export function Footer() {
 
         <Separator className="my-8 bg-rim" />
 
+        {/* Risk disclaimer */}
+        <div className="mb-8 p-4 rounded-lg border border-rim/50 bg-ink/50">
+          <p className="text-[10px] text-mist/70 leading-relaxed">
+            <span className="font-semibold text-mist/90">Risk Disclaimer:</span>{" "}
+            Trading foreign exchange, CFDs, and other financial instruments on margin carries a high level of risk
+            and may not be suitable for all investors. Between 74-89% of retail investor accounts lose money when
+            trading CFDs. You should consider whether you understand how these instruments work and whether you can
+            afford to take the high risk of losing your money. Past performance is not indicative of future results.
+          </p>
+          <p className="text-[10px] text-mist/70 leading-relaxed mt-2">
+            tedge.ai provides AI-powered market analysis tools for informational and educational purposes only.
+            Nothing on this platform constitutes financial advice, investment advice, trading advice, or any other
+            sort of advice. You should not treat any of the platform&apos;s content as such. tedge.ai does not recommend
+            that any financial instrument should be bought, sold, or held by you. Do your own due diligence and
+            consult your financial advisor before making any investment decisions.
+          </p>
+        </div>
+
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-mist">
             &copy; {new Date().getFullYear()} tedge.ai — All rights reserved.
