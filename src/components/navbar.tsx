@@ -22,6 +22,9 @@ export function Navbar() {
           <a href="#faq" className="text-sm text-mist hover:text-snow transition-colors">
             FAQ
           </a>
+          <a href="/changelog" className="text-sm text-mist hover:text-snow transition-colors">
+            Changelog
+          </a>
           <a href="https://docs.tedge.ai" className="text-sm text-mist hover:text-snow transition-colors">
             Docs
           </a>
