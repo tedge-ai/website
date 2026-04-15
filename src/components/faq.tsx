@@ -11,7 +11,7 @@ const FAQS = [
   {
     question: "What are credits and why do custom analyses cost credits?",
     answer:
-      "Credits are used exclusively for AI analyses on symbols beyond the 3 included majors. Each custom analysis uses our most advanced AI model (Claude Opus) which costs us significantly to run. Credits let us offer you unlimited symbol coverage while keeping subscription prices affordable. Chat, alerts, and post-trade coaching never consume credits.",
+      "Credits are used exclusively for AI analyses on symbols beyond the 3 included majors. Each custom analysis runs a deep multi-timeframe AI assessment that is computationally intensive. Credits let us offer you unlimited symbol coverage while keeping subscription prices affordable. Chat, alerts, and post-trade coaching never consume credits.",
   },
   {
     question: "How much does a custom analysis cost?",
