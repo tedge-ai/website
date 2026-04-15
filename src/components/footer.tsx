@@ -36,7 +36,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/coming-soon" className="text-xs text-mist hover:text-snow transition-colors">
+                <a href="https://docs.tedge.ai" className="text-xs text-mist hover:text-snow transition-colors">
                   Documentation
                 </a>
               </li>
@@ -74,7 +74,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/coming-soon" className="text-xs text-mist hover:text-snow transition-colors">
+                <a href="https://docs.tedge.ai" className="text-xs text-mist hover:text-snow transition-colors">
                   Help Center
                 </a>
               </li>
