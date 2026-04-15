@@ -28,11 +28,11 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="https://app.tedge.ai/sign-in" className="text-sm text-mist hover:text-snow transition-colors px-3 py-2">
+          <a href="/coming-soon" className="text-sm text-mist hover:text-snow transition-colors px-3 py-2">
             Sign in
           </a>
           <a
-            href="https://app.tedge.ai/sign-up"
+            href="/coming-soon"
             className="text-sm bg-gold text-ink hover:bg-gold/80 font-semibold px-4 py-2 rounded-lg transition-colors"
           >
             Get Started Free

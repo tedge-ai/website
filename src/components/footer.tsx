@@ -50,12 +50,12 @@ export function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a href="https://app.tedge.ai/sign-up" className="text-xs text-mist hover:text-snow transition-colors">
+                <a href="/coming-soon" className="text-xs text-mist hover:text-snow transition-colors">
                   Sign Up
                 </a>
               </li>
               <li>
-                <a href="https://app.tedge.ai/sign-in" className="text-xs text-mist hover:text-snow transition-colors">
+                <a href="/coming-soon" className="text-xs text-mist hover:text-snow transition-colors">
                   Sign In
                 </a>
               </li>
@@ -107,10 +107,10 @@ export function Footer() {
             &copy; {new Date().getFullYear()} tedge.ai — All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-xs text-mist hover:text-snow transition-colors">
+            <a href="/privacy" className="text-xs text-mist hover:text-snow transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-xs text-mist hover:text-snow transition-colors">
+            <a href="/terms" className="text-xs text-mist hover:text-snow transition-colors">
               Terms of Service
             </a>
           </div>

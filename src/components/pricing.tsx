@@ -170,7 +170,7 @@ export function Pricing() {
                 </ul>
 
                 <a
-                  href="https://app.tedge.ai/sign-up"
+                  href="/coming-soon"
                   className={`w-full font-semibold text-sm h-9 rounded-lg inline-flex items-center justify-center transition-colors ${
                     tier.highlight
                       ? "bg-gold text-ink hover:bg-gold/80"
