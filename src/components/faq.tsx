@@ -36,7 +36,7 @@ const FAQS = [
   {
     question: "Which brokers are supported?",
     answer:
-      "tedge.ai works with any MT5 or cTrader broker through our EdgeBridge connector. We\u2019ve tested with IC Markets, BlackBull Markets, OANDA, and Pepperstone. Our analyses use reference market data and are automatically adapted to your broker\u2019s symbol naming. The entry zones are accurate across brokers — typical OHLC differences are negligible on H1/H4 timeframes.",
+      "tedge.ai supports cTrader (direct cloud connection) and MT5 (via our lightweight EdgeBridge connector). We\u2019ve tested with IC Markets, BlackBull Markets, OANDA, and Pepperstone. Our analyses use reference market data and are automatically adapted to your broker\u2019s symbol naming. The entry zones are accurate across brokers — typical OHLC differences are negligible on H1/H4 timeframes.",
   },
   {
     question: "Why do analyses use reference data instead of my broker\u2019s data?",

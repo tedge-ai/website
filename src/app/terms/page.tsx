@@ -68,11 +68,12 @@ export default function Terms() {
 
             <h2>6. Broker Integration</h2>
             <p>
-              The Platform connects to your broker through EdgeBridge (MT5) or
-              direct API (cTrader). tedge.ai is not affiliated with any broker
-              and does not guarantee the accuracy of data received from
-              third-party sources. You are solely responsible for your trading
-              decisions and any orders placed through your broker.
+              The Platform connects to your broker through direct API
+              (cTrader) or EdgeBridge connector (MT5). tedge.ai is not
+              affiliated with any broker and does not guarantee the accuracy
+              of data received from third-party sources. You are solely
+              responsible for your trading decisions and any orders placed
+              through your broker.
             </p>
 
             <h2>7. Data and Accuracy</h2>

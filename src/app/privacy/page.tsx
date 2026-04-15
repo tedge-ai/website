@@ -67,7 +67,7 @@ export default function Privacy() {
               </li>
               <li>
                 <strong>Your broker:</strong> only through your locally-installed
-                EdgeBridge — we do not have direct access to your broker account
+                EdgeBridge (MT5) or direct API (cTrader) — we do not have direct access to your broker account
               </li>
             </ul>
 
@@ -76,7 +76,8 @@ export default function Privacy() {
               Your data is stored on secured servers located in Europe (OVH,
               France). We use encryption in transit (TLS) and implement standard
               security practices. Broker credentials are never stored on our
-              servers — the EdgeBridge connector runs locally on your machine.
+              servers — the EdgeBridge connector (MT5) runs locally on your
+              machine, and cTrader connects via secure OAuth2.
             </p>
 
             <h2>5. Data Retention</h2>
