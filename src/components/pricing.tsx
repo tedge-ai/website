@@ -10,98 +10,94 @@ const TIERS = [
     price: "0",
     period: "",
     description: "Explore the platform",
-    credits: "10 credits offered",
+    credits: "30 credits offered",
     cta: "Get Started",
     highlight: false,
     features: [
-      { label: "Symbols", value: "3 (BTC, XAU, EUR/USD)" },
+      { label: "AI Analyses", value: "3 majors included" },
+      { label: "Market Structure", value: CHECK },
       { label: "Mode", value: "Demo only" },
-      { label: "MT5 Bridge", value: CROSS },
-      { label: "Indicators / chart", value: "2" },
-      { label: "Saved drawings", value: "5" },
+      { label: "MT5 / cTrader", value: CROSS },
+      { label: "Credits / mo", value: "30 (one-time)" },
+      { label: "Custom symbol analysis", value: "50 credits" },
       { label: "Active alerts", value: "3" },
-      { label: "Scheduler slots", value: CROSS },
-      { label: "AI Credits / mo", value: "10 (one-time)" },
-      { label: "AI Analysis", value: "3 symbols" },
-      { label: "Custom strategy", value: CROSS },
+      { label: "Scheduler", value: CROSS },
       { label: "AI Chat", value: CROSS },
-      { label: "Candle history", value: "2,000" },
-      { label: "Push notifications", value: CROSS },
+      { label: "AI Coach", value: CROSS },
+      { label: "Push / Telegram", value: CROSS },
+      { label: "Saved drawings", value: "5" },
       { label: "Support", value: "Community" },
     ],
   },
   {
-    name: "Basic",
-    price: "19",
+    name: "Starter",
+    price: "29",
     period: "/mo",
-    description: "Full platform access",
-    credits: "15 credits/mo included",
+    description: "Go live with AI edge",
+    credits: "80 credits/mo included",
     cta: "Subscribe",
     highlight: false,
     features: [
-      { label: "Symbols", value: "All" },
+      { label: "AI Analyses", value: "3 majors included" },
+      { label: "Market Structure", value: CHECK },
       { label: "Mode", value: "Live + Demo" },
-      { label: "MT5 Bridge", value: CHECK },
-      { label: "Indicators / chart", value: "5" },
+      { label: "MT5 / cTrader", value: CHECK },
+      { label: "Credits / mo", value: "80" },
+      { label: "Custom symbol analysis", value: "40 credits" },
+      { label: "Active alerts", value: "15" },
+      { label: "Scheduler", value: "1 slot" },
+      { label: "AI Chat", value: "15 msg/day" },
+      { label: "AI Coach", value: "Post-trade review" },
+      { label: "Push / Telegram", value: CHECK },
       { label: "Saved drawings", value: "20" },
-      { label: "Active alerts", value: "20" },
-      { label: "Scheduler slots", value: "2" },
-      { label: "AI Credits / mo", value: "15" },
-      { label: "AI Analysis", value: "All symbols" },
-      { label: "Custom strategy", value: CROSS },
-      { label: "AI Chat", value: CHECK },
-      { label: "Candle history", value: "5,000" },
-      { label: "Push notifications", value: CHECK },
       { label: "Support", value: "Email" },
     ],
   },
   {
-    name: "Advanced",
-    price: "49",
+    name: "Pro",
+    price: "59",
     period: "/mo",
     description: "For active traders",
-    credits: "40 credits/mo included",
+    credits: "250 credits/mo included",
     cta: "Subscribe",
     highlight: true,
     features: [
-      { label: "Symbols", value: "All" },
+      { label: "AI Analyses", value: "3 majors included" },
+      { label: "Market Structure", value: CHECK },
       { label: "Mode", value: "Live + Demo" },
-      { label: "MT5 Bridge", value: CHECK },
-      { label: "Indicators / chart", value: "15" },
+      { label: "MT5 / cTrader", value: CHECK },
+      { label: "Credits / mo", value: "250" },
+      { label: "Custom symbol analysis", value: "30 credits" },
+      { label: "Active alerts", value: "50" },
+      { label: "Scheduler", value: "5 slots" },
+      { label: "AI Chat", value: "50 msg/day" },
+      { label: "AI Coach", value: "Review + Monthly synthesis" },
+      { label: "Push / Telegram", value: CHECK },
       { label: "Saved drawings", value: "100" },
-      { label: "Active alerts", value: "100" },
-      { label: "Scheduler slots", value: "10" },
-      { label: "AI Credits / mo", value: "40" },
-      { label: "AI Analysis", value: "All symbols" },
-      { label: "Custom strategy", value: CROSS },
-      { label: "AI Chat", value: CHECK },
-      { label: "Candle history", value: "20,000" },
-      { label: "Push notifications", value: CHECK },
       { label: "Support", value: "Priority" },
     ],
   },
   {
-    name: "Premium",
-    price: "149",
+    name: "Elite",
+    price: "99",
     period: "/mo",
     description: "Unlimited AI power",
-    credits: "Unlimited (fair use)",
+    credits: "600 credits/mo included",
     cta: "Subscribe",
     highlight: false,
     features: [
-      { label: "Symbols", value: "All" },
+      { label: "AI Analyses", value: "Majors + extended" },
+      { label: "Market Structure", value: CHECK },
       { label: "Mode", value: "Live + Demo" },
-      { label: "MT5 Bridge", value: CHECK },
-      { label: "Indicators / chart", value: "Unlimited" },
-      { label: "Saved drawings", value: "Unlimited" },
+      { label: "MT5 / cTrader", value: CHECK },
+      { label: "Credits / mo", value: "600" },
+      { label: "Custom symbol analysis", value: "20 credits" },
       { label: "Active alerts", value: "Unlimited" },
-      { label: "Scheduler slots", value: "Unlimited" },
-      { label: "AI Credits / mo", value: "Unlimited" },
-      { label: "AI Analysis", value: "All symbols" },
-      { label: "Custom strategy", value: CHECK },
-      { label: "AI Chat", value: "Priority" },
-      { label: "Candle history", value: "Unlimited" },
-      { label: "Push notifications", value: CHECK },
+      { label: "Scheduler", value: "Unlimited" },
+      { label: "AI Chat", value: "Unlimited" },
+      { label: "AI Coach", value: "Review + Weekly synthesis" },
+      { label: "Push / Telegram", value: CHECK },
+      { label: "Saved drawings", value: "Unlimited" },
       { label: "Support", value: "Dedicated" },
     ],
   },
@@ -110,10 +106,10 @@ const TIERS = [
 function FeatureValue({ value }: { value: string }) {
   if (value === CHECK) return <span className="text-jade font-bold">{CHECK}</span>;
   if (value === CROSS) return <span className="text-mist/30">{CROSS}</span>;
-  if (value === "Unlimited" || value === "Priority" || value === "Dedicated")
+  if (value === "Unlimited" || value === "Dedicated")
     return <span className="text-gold font-semibold text-xs">{value}</span>;
-  if (value === "All" || value === "All symbols")
-    return <span className="text-snow/90 text-xs">{value}</span>;
+  if (value.includes("majors") || value.includes("Majors"))
+    return <span className="text-jade text-xs">{value}</span>;
   return <span className="text-snow/70 text-xs">{value}</span>;
 }
 
@@ -126,8 +122,9 @@ export function Pricing() {
             Simple, transparent pricing
           </h2>
           <p className="text-mist text-lg max-w-2xl mx-auto">
-            Start free, upgrade when you need more. AI features use credits —
-            included in every plan, rechargeable anytime.
+            Start free with AI analyses on major pairs. Use credits to analyze
+            any symbol you want — included in every paid plan, rechargeable
+            anytime.
           </p>
         </div>
 
@@ -185,6 +182,17 @@ export function Pricing() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Credit recharge info */}
+        <div className="mt-12 text-center">
+          <p className="text-sm text-mist">
+            Need more credits? Recharge anytime from{" "}
+            <span className="text-snow font-semibold">10&euro;</span>.
+            Higher plans get better rates — up to{" "}
+            <span className="text-gold font-semibold">150 credits for 10&euro;</span>{" "}
+            on Elite.
+          </p>
         </div>
       </div>
     </section>
