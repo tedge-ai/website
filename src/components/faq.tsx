@@ -11,7 +11,7 @@ const FAQS = [
   {
     question: "What are credits and why do custom analyses cost credits?",
     answer:
-      "Credits are used exclusively for AI analyses on symbols beyond the 3 included majors. Each custom analysis runs a deep multi-timeframe AI assessment that is computationally intensive. Credits let us offer you unlimited symbol coverage while keeping subscription prices affordable. Chat, alerts, and post-trade coaching never consume credits.",
+      "Credits are used for AI-powered features: custom symbol analyses, and on the Free plan, chat messages and trade reviews (1 credit each). Each custom analysis runs a deep multi-timeframe AI assessment that is computationally intensive. Credits let us offer you a taste of every feature while keeping subscription prices affordable. Paid plans include unlimited chat and coach reviews.",
   },
   {
     question: "How much does a custom analysis cost?",
@@ -31,7 +31,7 @@ const FAQS = [
   {
     question: "What does the AI Coach do?",
     answer:
-      "After every trade closes, the AI Coach automatically reviews your execution: was the plan followed? Was the timing right? Was the risk appropriate? You get a discipline score (1-10) and actionable feedback. If you add notes to document your reasoning, the coach re-evaluates with your context. Pro and Elite plans also get periodic performance syntheses.",
+      "The AI Coach reviews your trade execution: was the plan followed? Was the timing right? Was the risk appropriate? You get a discipline score (1-10) and actionable feedback. On Free, each review costs 1 credit. Starter plans get unlimited manual reviews. Pro and Elite plans get automatic reviews after every trade close, plus periodic performance syntheses.",
   },
   {
     question: "Which brokers are supported?",
