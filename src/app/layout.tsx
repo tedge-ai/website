@@ -29,8 +29,17 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${outfit.variable} ${jetbrains.variable} dark`}
-      style={{ backgroundColor: "#06080f" }}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `
+          try {
+            const t = localStorage.getItem('edge:theme');
+            if (t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+              document.documentElement.classList.replace('dark', 'light');
+            }
+          } catch {}
+        `}} />
+      </head>
       <body className="min-h-dvh flex flex-col bg-ink text-snow antialiased">
         {children}
       </body>

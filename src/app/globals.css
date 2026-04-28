@@ -47,21 +47,34 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
-  /* Custom colors matching the platform */
-  --color-gold: #C9973A;
-  --color-ink: #06080f;
-  --color-ink2: #090c16;
-  --color-snow: #e8edf5;
-  --color-mist: #6b7a99;
-  --color-rim: rgba(255, 255, 255, 0.06);
-  --color-jade: #34c77b;
-  --color-crimson: #e05252;
-  --color-glass: rgba(255, 255, 255, 0.04);
-  --color-glass2: rgba(255, 255, 255, 0.08);
+  /* Custom colors — runtime via CSS vars */
+  --color-gold: var(--edge-gold);
+  --color-ink: var(--edge-ink);
+  --color-ink2: var(--edge-ink2);
+  --color-snow: var(--edge-snow);
+  --color-mist: var(--edge-mist);
+  --color-rim: var(--edge-rim);
+  --color-jade: var(--edge-jade);
+  --color-crimson: var(--edge-crimson);
+  --color-glass: var(--edge-glass);
+  --color-glass2: var(--edge-glass2);
 }
 
-/* Dark only — no light mode for commercial site */
+/* Dark defaults */
 :root {
+  --radius: 0.625rem;
+
+  --edge-gold: #C9973A;
+  --edge-ink: #06080f;
+  --edge-ink2: #090c16;
+  --edge-snow: #e8edf5;
+  --edge-mist: #6b7a99;
+  --edge-rim: rgba(255, 255, 255, 0.06);
+  --edge-jade: #34c77b;
+  --edge-crimson: #e05252;
+  --edge-glass: rgba(255, 255, 255, 0.04);
+  --edge-glass2: rgba(255, 255, 255, 0.08);
+
   --background: #06080f;
   --foreground: #e8edf5;
   --card: #090c16;
@@ -80,7 +93,39 @@
   --border: rgba(255, 255, 255, 0.06);
   --input: rgba(255, 255, 255, 0.08);
   --ring: #C9973A;
-  --radius: 0.625rem;
+}
+
+/* Light overrides */
+html.light {
+  --edge-gold: #b8860b;
+  --edge-ink: #ffffff;
+  --edge-ink2: #f5f5f7;
+  --edge-snow: #1a1a2e;
+  --edge-mist: rgba(60, 70, 90, 0.7);
+  --edge-rim: rgba(0, 0, 0, 0.08);
+  --edge-jade: #1a9f56;
+  --edge-crimson: #d03030;
+  --edge-glass: rgba(0, 0, 0, 0.03);
+  --edge-glass2: rgba(0, 0, 0, 0.06);
+
+  --background: #ffffff;
+  --foreground: #1a1a2e;
+  --card: #f5f5f7;
+  --card-foreground: #1a1a2e;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a2e;
+  --primary: #b8860b;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(0, 0, 0, 0.05);
+  --secondary-foreground: #1a1a2e;
+  --muted: #f5f5f7;
+  --muted-foreground: rgba(60, 70, 90, 0.7);
+  --accent: rgba(0, 0, 0, 0.05);
+  --accent-foreground: #1a1a2e;
+  --destructive: #d03030;
+  --border: rgba(0, 0, 0, 0.08);
+  --input: rgba(0, 0, 0, 0.08);
+  --ring: #b8860b;
 }
 
 @layer base {
@@ -92,5 +137,11 @@
   }
   html {
     @apply font-sans;
+  }
+  html.dark {
+    background-color: #06080f;
+  }
+  html.light {
+    background-color: #ffffff;
   }
 }
