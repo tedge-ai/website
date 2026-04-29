@@ -5,7 +5,7 @@ import { FeatureVideo } from "@/components/feature-video";
 const FEATURES = [
   {
     badge: "AI Agent",
-    title: "Your AI Trading Copilot",
+    title: "Your AI Trading Edge",
     description:
       "Ask the agent to analyze any chart using Supply & Demand or Smart Money Concepts. It draws zones, key levels, and order blocks directly on your chart — and prepares trade setups with entry, SL, and TP.",
     highlights: [

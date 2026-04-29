@@ -94,7 +94,7 @@ export function Pricing() {
           </h2>
           <p className="text-mist text-lg max-w-2xl mx-auto">
             Start free with 10 AI messages. Upgrade for daily access
-            to your AI trading copilot, or bring your own API key for
+            to your AI trading agent, or bring your own API key for
             unlimited usage.
           </p>
         </div>

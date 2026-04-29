@@ -17,7 +17,7 @@ export function Hero() {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-snow leading-[1.1] mb-6">
           Your AI Trading
           <br />
-          <span className="text-gold">Copilot</span>
+          <span className="text-gold">Edge</span>
         </h1>
 
         <p className="mx-auto max-w-2xl text-lg md:text-xl text-mist leading-relaxed mb-10">

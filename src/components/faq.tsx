@@ -6,7 +6,7 @@ const FAQS = [
   {
     question: "What does the AI agent do exactly?",
     answer:
-      "The AI agent is your trading copilot. You chat with it in natural language — ask it to analyze a chart, draw supply & demand zones, identify order blocks, calculate your position sizing, or prepare a trade. It uses real-time market data, takes screenshots of your chart, and draws directly on it. It can also set price alerts and scan multiple markets for you.",
+      "The AI agent is your trading edge. You chat with it in natural language — ask it to analyze a chart, draw supply & demand zones, identify order blocks, calculate your position sizing, or prepare a trade. It uses real-time market data, takes screenshots of your chart, and draws directly on it. It can also set price alerts and scan multiple markets for you.",
   },
   {
     question: "What are the 10 free messages?",
