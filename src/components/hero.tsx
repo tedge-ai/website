@@ -11,19 +11,19 @@ export function Hero() {
           variant="secondary"
           className="mb-6 bg-gold/10 text-gold border-gold/20 text-xs font-mono"
         >
-          AI-Powered Trading Intelligence
+          AI Trading Agent
         </Badge>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-snow leading-[1.1] mb-6">
-          Your Trading Edge,
+          Your AI Trading
           <br />
-          <span className="text-gold">Powered by AI</span>
+          <span className="text-gold">Copilot</span>
         </h1>
 
         <p className="mx-auto max-w-2xl text-lg md:text-xl text-mist leading-relaxed mb-10">
-          Smart Market Structure analysis, real-time charts, automated trade
-          signals, and intelligent alerts. Everything you need to trade with
-          confidence.
+          An AI agent that analyzes your charts, draws key levels, prepares
+          trade setups, and manages your risk. Connected to your broker,
+          it trades with you in real-time.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -31,7 +31,7 @@ export function Hero() {
             href="/coming-soon"
             className="bg-gold text-ink hover:bg-gold/80 font-semibold text-base px-8 h-12 rounded-lg inline-flex items-center justify-center transition-colors"
           >
-            Start Free Trial
+            Try Free &mdash; 10 Messages
           </a>
           <a
             href="#features"
@@ -42,7 +42,7 @@ export function Hero() {
         </div>
 
         <p className="mt-6 text-xs text-mist">
-          No credit card required. 10 credits free to test AI features.
+          No credit card required. 10 AI messages free to experience the platform.
         </p>
       </div>
     </section>

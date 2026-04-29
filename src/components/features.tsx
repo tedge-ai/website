@@ -4,15 +4,15 @@ import { FeatureVideo } from "@/components/feature-video";
 
 const FEATURES = [
   {
-    badge: "AI Analysis",
-    title: "Instant Market Structure Analysis",
+    badge: "AI Agent",
+    title: "Your AI Trading Copilot",
     description:
-      "Edge AI identifies key price levels, order blocks, fair value gaps, and liquidity zones using Smart Money Concepts. Get actionable trade setups with a single click.",
+      "Ask the agent to analyze any chart using Supply & Demand or Smart Money Concepts. It draws zones, key levels, and order blocks directly on your chart — and prepares trade setups with entry, SL, and TP.",
     highlights: [
-      "Support & resistance zones auto-detected",
-      "Order blocks & fair value gaps highlighted",
-      "Multi-timeframe bias (H4/H1)",
-      "Trade opportunities with entry, SL, TP",
+      "Multi-timeframe analysis on any symbol",
+      "Draws S&D zones and levels on your chart",
+      "Prepares trades with pre-filled execution dialog",
+      "Scans multiple markets to find the best setups",
     ],
     video: "/videos/analysis.mp4",
     reverse: false,
@@ -21,10 +21,10 @@ const FEATURES = [
     badge: "Live Charts",
     title: "Professional Charting, Real-Time Data",
     description:
-      "21 timeframes, drawing tools, customizable indicators, and automatic overlay of AI-detected zones. Powered by TradingView Lightweight Charts.",
+      "21 timeframes, drawing tools, customizable indicators, and automatic Market Structure overlay. Powered by TradingView Lightweight Charts.",
     highlights: [
-      "All MT5 timeframes including M2, M3, H6, H12",
-      "Trendlines, Fibonacci, channels, positions",
+      "All timeframes including M2, M3, H6, H12",
+      "Trendlines, Fibonacci, channels, rectangles",
       "EMA, SMA, RSI, ADX with full customization",
       "Infinite scroll history",
     ],
@@ -32,42 +32,42 @@ const FEATURES = [
     reverse: true,
   },
   {
-    badge: "MT5 Bridge",
-    title: "Your MetaTrader 5, Connected",
+    badge: "Broker Connected",
+    title: "MT5 & cTrader, Live Execution",
     description:
-      "Install EdgeBridge on your Windows machine and get live data feeds, real-time position tracking, and direct trade execution from the web platform.",
+      "Connect your MetaTrader 5 via EdgeBridge or your cTrader account directly. Get live prices, track positions in real-time, and execute trades from the platform or through the AI agent.",
     highlights: [
-      "Live bid/ask prices from your broker",
+      "Live bid/ask from your broker",
       "All your broker's symbols available",
-      "Real-time P&L on positions",
-      "Execute trades directly from the chart",
+      "Real-time P&L tracking with inline SL/TP editing",
+      "Execute trades directly — or let the agent prepare them",
     ],
     video: "/videos/bridge.mp4",
     reverse: false,
   },
   {
-    badge: "AI Assistant",
-    title: "Chat With Your Trading AI",
+    badge: "Risk Management",
+    title: "Built-In Money Management",
     description:
-      "Ask Edge AI about any market, strategy, or setup. Get real-time insights, second opinions on your trade ideas, and learn as you trade.",
+      "Define your risk profile, and the agent calculates optimal position sizing for every trade. Multiple MM presets and custom profiles to match your trading style.",
     highlights: [
-      "Context-aware market discussions",
-      "Strategy validation & risk assessment",
-      "Learn SMC concepts interactively",
-      "Available 24/7",
+      "Automatic lot sizing based on risk percentage",
+      "Preset profiles: Prudent, Standard, Aggressive",
+      "Custom profiles for advanced traders",
+      "Agent calculates sizing on demand",
     ],
     video: "/videos/assistant.mp4",
     reverse: true,
   },
   {
-    badge: "Alerts & Scheduler",
+    badge: "Alerts",
     title: "Never Miss a Setup",
     description:
-      "Set price alerts on key levels and schedule automated analyses. Get push notifications when price approaches your zones or when new opportunities appear.",
+      "Set price alerts on key levels — manually or through the AI agent. Get push notifications when price reaches your zones.",
     highlights: [
       "Price alerts with push notifications",
-      "Scheduled AI analysis on your watchlist",
-      "Alert on AI-detected opportunities",
+      "Agent creates alerts automatically after analysis",
+      "Cross up, cross down, above, below conditions",
       "Mobile notifications via PWA",
     ],
     video: "/videos/alerts.mp4",
@@ -128,8 +128,8 @@ export function Features() {
             Everything you need to trade smarter
           </h2>
           <p className="text-mist text-lg max-w-2xl mx-auto">
-            A complete trading intelligence platform that combines AI analysis
-            with professional tools.
+            An AI agent connected to your broker that analyzes, draws, and
+            prepares your trades.
           </p>
         </div>
 

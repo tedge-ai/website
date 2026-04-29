@@ -9,96 +9,69 @@ const TIERS = [
     name: "Free",
     price: "0",
     period: "",
-    description: "Explore the platform",
-    credits: "30 credits offered",
+    description: "Discover the AI agent",
+    subtitle: "10 AI messages to try everything",
     cta: "Get Started",
     highlight: false,
     features: [
-      { label: "AI Analyses", value: "3 majors included" },
+      { label: "AI Agent messages", value: "10 (one-time)" },
+      { label: "AI Model", value: "Sonnet" },
+      { label: "All symbols", value: CHECK },
+      { label: "All agent tools", value: CHECK },
       { label: "Market Structure", value: CHECK },
       { label: "Mode", value: "Demo only" },
       { label: "MT5 / cTrader", value: CROSS },
-      { label: "Credits / mo", value: "30 (one-time)" },
-      { label: "Custom symbol analysis", value: "50 credits" },
       { label: "Active alerts", value: "3" },
-      { label: "Scheduler", value: CROSS },
-      { label: "AI Chat", value: "3 credits/msg" },
-      { label: "AI Coach", value: "2 credits/review" },
+      { label: "Money Management", value: "Presets" },
+      { label: "Trade replay", value: CROSS },
       { label: "Push / Telegram", value: CROSS },
-      { label: "Saved drawings", value: "5" },
       { label: "Support", value: "Community" },
     ],
   },
   {
-    name: "Starter",
-    price: "29",
+    name: "Standard",
+    price: "49",
     period: "/mo",
-    description: "Go live with AI edge",
-    credits: "80 credits/mo included",
+    description: "For active traders",
+    subtitle: "20 messages/day, 100/week",
     cta: "Subscribe",
-    highlight: false,
+    highlight: true,
     features: [
-      { label: "AI Analyses", value: "3 majors included" },
+      { label: "AI Agent messages", value: "20/day, 100/week" },
+      { label: "AI Model", value: "Sonnet" },
+      { label: "All symbols", value: CHECK },
+      { label: "All agent tools", value: CHECK },
       { label: "Market Structure", value: CHECK },
       { label: "Mode", value: "Live + Demo" },
       { label: "MT5 / cTrader", value: CHECK },
-      { label: "Credits / mo", value: "80" },
-      { label: "Custom symbol analysis", value: "40 credits" },
-      { label: "Active alerts", value: "15" },
-      { label: "Scheduler", value: "1 slot" },
-      { label: "AI Chat", value: "15 msg/day" },
-      { label: "AI Coach", value: "Manual review" },
+      { label: "Active alerts", value: "20" },
+      { label: "Money Management", value: "Presets + Custom" },
+      { label: "Trade replay", value: CHECK },
       { label: "Push / Telegram", value: CHECK },
-      { label: "Saved drawings", value: "20" },
       { label: "Support", value: "Email" },
     ],
   },
   {
-    name: "Pro",
-    price: "59",
+    name: "BYOK",
+    price: "19",
     period: "/mo",
-    description: "For active traders",
-    credits: "250 credits/mo included",
-    cta: "Subscribe",
-    highlight: true,
-    features: [
-      { label: "AI Analyses", value: "3 majors included" },
-      { label: "Market Structure", value: CHECK },
-      { label: "Mode", value: "Live + Demo" },
-      { label: "MT5 / cTrader", value: CHECK },
-      { label: "Credits / mo", value: "250" },
-      { label: "Custom symbol analysis", value: "30 credits" },
-      { label: "Active alerts", value: "50" },
-      { label: "Scheduler", value: "5 slots" },
-      { label: "AI Chat", value: "50 msg/day" },
-      { label: "AI Coach", value: "Auto review + Monthly synthesis" },
-      { label: "Push / Telegram", value: CHECK },
-      { label: "Saved drawings", value: "100" },
-      { label: "Support", value: "Priority" },
-    ],
-  },
-  {
-    name: "Elite",
-    price: "99",
-    period: "/mo",
-    description: "Unlimited AI power",
-    credits: "600 credits/mo included",
+    description: "Bring Your Own Key",
+    subtitle: "Unlimited — your Anthropic API key",
     cta: "Subscribe",
     highlight: false,
     features: [
-      { label: "AI Analyses", value: "Majors + extended" },
+      { label: "AI Agent messages", value: "Unlimited" },
+      { label: "AI Model", value: "Your choice" },
+      { label: "All symbols", value: CHECK },
+      { label: "All agent tools", value: CHECK },
       { label: "Market Structure", value: CHECK },
       { label: "Mode", value: "Live + Demo" },
       { label: "MT5 / cTrader", value: CHECK },
-      { label: "Credits / mo", value: "600" },
-      { label: "Custom symbol analysis", value: "20 credits" },
       { label: "Active alerts", value: "Unlimited" },
-      { label: "Scheduler", value: "Unlimited" },
-      { label: "AI Chat", value: "Unlimited" },
-      { label: "AI Coach", value: "Auto review + Weekly synthesis" },
+      { label: "Money Management", value: "Presets + Custom" },
+      { label: "Trade replay", value: CHECK },
       { label: "Push / Telegram", value: CHECK },
-      { label: "Saved drawings", value: "Unlimited" },
-      { label: "Support", value: "Dedicated" },
+      { label: "Support", value: "Email" },
     ],
   },
 ];
@@ -106,29 +79,27 @@ const TIERS = [
 function FeatureValue({ value }: { value: string }) {
   if (value === CHECK) return <span className="text-jade font-bold">{CHECK}</span>;
   if (value === CROSS) return <span className="text-mist/30">{CROSS}</span>;
-  if (value === "Unlimited" || value === "Dedicated")
+  if (value === "Unlimited" || value === "Your choice")
     return <span className="text-gold font-semibold text-xs">{value}</span>;
-  if (value.includes("majors") || value.includes("Majors"))
-    return <span className="text-jade text-xs">{value}</span>;
   return <span className="text-snow/70 text-xs">{value}</span>;
 }
 
 export function Pricing() {
   return (
     <section id="pricing" className="py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-5xl px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-snow mb-4">
             Simple, transparent pricing
           </h2>
           <p className="text-mist text-lg max-w-2xl mx-auto">
-            Start free with AI analyses on major pairs. Use credits to analyze
-            any symbol you want — included in every paid plan, rechargeable
-            anytime.
+            Start free with 10 AI messages. Upgrade for daily access
+            to your AI trading copilot, or bring your own API key for
+            unlimited usage.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {TIERS.map((tier) => (
             <Card
               key={tier.name}
@@ -140,7 +111,7 @@ export function Pricing() {
             >
               {tier.highlight && (
                 <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-ink font-semibold text-xs">
-                  Most Popular
+                  Recommended
                 </Badge>
               )}
               <CardContent className="p-6 flex flex-col flex-1">
@@ -154,7 +125,7 @@ export function Pricing() {
                   <span className="text-sm text-mist">{tier.period}</span>
                 </div>
                 <p className="text-xs text-gold font-mono mb-6">
-                  {tier.credits}
+                  {tier.subtitle}
                 </p>
 
                 <ul className="space-y-2 flex-1 mb-6">
@@ -184,14 +155,13 @@ export function Pricing() {
           ))}
         </div>
 
-        {/* Credit recharge info */}
+        {/* BYOK explanation */}
         <div className="mt-12 text-center">
           <p className="text-sm text-mist">
-            Need more credits? Recharge anytime from{" "}
-            <span className="text-snow font-semibold">10&euro;</span>.
-            Higher plans get better rates — up to{" "}
-            <span className="text-gold font-semibold">150 credits for 10&euro;</span>{" "}
-            on Elite.
+            <span className="text-snow font-semibold">BYOK</span> &mdash; Bring
+            Your Own Key. Use your Anthropic API key for unlimited AI usage.
+            You pay Anthropic directly for AI costs, tedge.ai charges only for
+            the platform and broker infrastructure.
           </p>
         </div>
       </div>
