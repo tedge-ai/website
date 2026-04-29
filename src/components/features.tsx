@@ -7,10 +7,10 @@ const FEATURES = [
     badge: "AI Agent",
     title: "Your AI Trading Edge",
     description:
-      "Ask the agent to analyze any chart using Supply & Demand or Smart Money Concepts. It draws zones, key levels, and order blocks directly on your chart — and prepares trade setups with entry, SL, and TP.",
+      "Ask the agent to analyze any chart with any strategy — S&D, SMC, ICT, price action, or your own methodology. It draws zones, key levels, and setups directly on your chart, and prepares trades with entry, SL, and TP.",
     highlights: [
-      "Multi-timeframe analysis on any symbol",
-      "Draws S&D zones and levels on your chart",
+      "Multi-timeframe analysis on any symbol, any strategy",
+      "Draws zones and levels directly on your chart",
       "Prepares trades with pre-filled execution dialog",
       "Scans multiple markets to find the best setups",
     ],
