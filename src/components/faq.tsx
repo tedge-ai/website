@@ -11,17 +11,17 @@ const FAQS = [
   {
     question: "What are the 10 free messages?",
     answer:
-      "When you sign up, you get 10 AI messages to try the full platform — same Sonnet model, same tools as paid plans. That's enough for 2-3 complete chart analyses with drawings and setups. No credit card required.",
+      "When you sign up, you get 10 AI messages to try the full platform — same AI model, same tools as paid plans. That's enough for 2-3 complete chart analyses with drawings and setups. No credit card required.",
   },
   {
     question: "What's the difference between Standard and BYOK?",
     answer:
-      "Standard (49\u20ac/mo) includes 20 AI messages per day using our Sonnet model. BYOK (19\u20ac/mo) lets you use your own Anthropic API key for unlimited messages — you pay Anthropic directly for AI costs. Both include full broker access, all tools, and all features. BYOK is ideal for power users who send many messages daily.",
+      "Standard (49\u20ac/mo) includes 20 AI messages per day with our proprietary AI model. BYOK (19\u20ac/mo) lets you use your own AI API key for unlimited messages — you pay for AI costs directly. Both include full broker access, all tools, and all features. BYOK is ideal for power users who send many messages daily.",
   },
   {
     question: "What is BYOK (Bring Your Own Key)?",
     answer:
-      "BYOK means you provide your own Anthropic API key. You get unlimited AI agent usage, choose your preferred model (Sonnet, Opus, Haiku), and pay Anthropic directly for AI costs. tedge.ai charges 19\u20ac/mo for the platform infrastructure and broker connectivity.",
+      "BYOK means you provide your own AI API key. You get unlimited AI agent usage and pay for AI costs directly. tedge.ai charges 19\u20ac/mo for the platform infrastructure and broker connectivity.",
   },
   {
     question: "What happens when I reach my daily message limit?",

@@ -15,7 +15,6 @@ const TIERS = [
     highlight: false,
     features: [
       { label: "AI Agent messages", value: "10 (one-time)" },
-      { label: "AI Model", value: "Sonnet" },
       { label: "All symbols", value: CHECK },
       { label: "All agent tools", value: CHECK },
       { label: "Market Structure", value: CHECK },
@@ -38,7 +37,6 @@ const TIERS = [
     highlight: true,
     features: [
       { label: "AI Agent messages", value: "20/day, 100/week" },
-      { label: "AI Model", value: "Sonnet" },
       { label: "All symbols", value: CHECK },
       { label: "All agent tools", value: CHECK },
       { label: "Market Structure", value: CHECK },
@@ -56,12 +54,11 @@ const TIERS = [
     price: "19",
     period: "/mo",
     description: "Bring Your Own Key",
-    subtitle: "Unlimited — your Anthropic API key",
+    subtitle: "Unlimited — your own AI API key",
     cta: "Subscribe",
     highlight: false,
     features: [
       { label: "AI Agent messages", value: "Unlimited" },
-      { label: "AI Model", value: "Your choice" },
       { label: "All symbols", value: CHECK },
       { label: "All agent tools", value: CHECK },
       { label: "Market Structure", value: CHECK },
@@ -159,8 +156,8 @@ export function Pricing() {
         <div className="mt-12 text-center">
           <p className="text-sm text-mist">
             <span className="text-snow font-semibold">BYOK</span> &mdash; Bring
-            Your Own Key. Use your Anthropic API key for unlimited AI usage.
-            You pay Anthropic directly for AI costs, tedge.ai charges only for
+            Your Own Key. Use your own AI API key for unlimited agent usage.
+            You pay for AI costs directly, tedge.ai charges only for
             the platform and broker infrastructure.
           </p>
         </div>
