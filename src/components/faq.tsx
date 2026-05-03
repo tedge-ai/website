@@ -1,72 +1,38 @@
-"use client";
+'use client';
 
 import { useState } from "react";
+import { useI18n } from "@/lib/i18n";
 
-const FAQS = [
-  {
-    question: "What does the AI agent do exactly?",
-    answer:
-      "The AI agent is your trading assistant. You chat with it in natural language — ask it to analyze a chart, draw key zones and levels, add indicators, calculate position sizing, or prepare a trade. It uses real-time market data, draws directly on your chart, and can manage alerts and trades for you.",
-  },
-  {
-    question: "What are the 10 free messages?",
-    answer:
-      "When you sign up, you get 10 AI messages to try the full platform — same AI model, same tools as paid plans. That's enough for 2-3 complete analyses with drawings and setups. No credit card required.",
-  },
-  {
-    question: "What's the difference between Standard and BYOK?",
-    answer:
-      "Standard (49.90\u20ac/mo) includes 20 AI messages per day with AI costs included in your subscription. BYOK (19.90\u20ac/mo) lets you use your own Anthropic API key for unlimited messages — AI costs are billed directly by Anthropic. Both include full broker access, all tools, and all features.",
-  },
-  {
-    question: "What is BYOK (Bring Your Own Key)?",
-    answer:
-      "BYOK means you provide your own Anthropic API key. You get unlimited AI agent usage and pay for AI costs directly to Anthropic. tedge.ai charges 19.90\u20ac/mo for the platform, broker connectivity, and all features.",
-  },
-  {
-    question: "What happens when I reach my daily message limit?",
-    answer:
-      "The AI agent will let you know and suggest upgrading. Your positions, alerts, and charts remain fully functional — you just can't send new messages to the agent until the quota resets. Weekly limit prevents overuse across the week.",
-  },
-  {
-    question: "What is Market Structure and is it free?",
-    answer:
-      "Market Structure is our real-time trend detection system. It identifies Break of Structure (BOS), Change of Character (ChoCh), and swing points directly on your chart — updated live with every candle. It's free on all plans.",
-  },
-  {
-    question: "Which brokers are supported?",
-    answer:
-      "tedge.ai supports cTrader (direct cloud connection) and MetaTrader 5 (via tedge connect, our lightweight Windows connector). Compatible with IC Markets, BlackBull Markets, Pepperstone, FxPro, Axiory, and more.",
-  },
-  {
-    question: "Can I use tedge.ai with a demo account?",
-    answer:
-      "Yes! The Free plan includes a virtual demo account to practice trading. You get full access to the AI agent (10 messages), Market Structure, charting tools, and money management. Upgrade to Standard or BYOK to connect your real broker.",
-  },
-  {
-    question: "What can the AI agent draw on my chart?",
-    answer:
-      "The agent can draw zones (supply/demand, order blocks), horizontal levels, support/resistance lines, and trade setups with entry/SL/TP markers. It can also recommend and apply indicators. All drawings are labeled, can be locked, and sync across your devices.",
-  },
+const FAQ_KEYS = [
+  { q: 'faq1q', a: 'faq1a' },
+  { q: 'faq2q', a: 'faq2a' },
+  { q: 'faq3q', a: 'faq3a' },
+  { q: 'faq4q', a: 'faq4a' },
+  { q: 'faq5q', a: 'faq5a' },
+  { q: 'faq6q', a: 'faq6a' },
+  { q: 'faq7q', a: 'faq7a' },
+  { q: 'faq8q', a: 'faq8a' },
+  { q: 'faq9q', a: 'faq9a' },
 ];
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { t } = useI18n();
 
   return (
     <section id="faq" className="py-24 md:py-32">
       <div className="mx-auto max-w-3xl px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-snow mb-4">
-            Frequently asked questions
+            {t('faqTitle')}
           </h2>
           <p className="text-mist text-lg">
-            Everything you need to know about tedge.ai.
+            {t('faqSubtitle')}
           </p>
         </div>
 
         <div className="space-y-2">
-          {FAQS.map((faq, i) => (
+          {FAQ_KEYS.map((faq, i) => (
             <div
               key={i}
               className="border border-rim rounded-lg overflow-hidden"
@@ -76,7 +42,7 @@ export function FAQ() {
                 className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left hover:bg-glass/30 transition-colors"
               >
                 <span className="text-sm font-medium text-snow">
-                  {faq.question}
+                  {t(faq.q)}
                 </span>
                 <span
                   className={`text-mist shrink-0 transition-transform ${
@@ -89,7 +55,7 @@ export function FAQ() {
               {openIndex === i && (
                 <div className="px-5 pb-4">
                   <p className="text-sm text-mist leading-relaxed">
-                    {faq.answer}
+                    {t(faq.a)}
                   </p>
                 </div>
               )}

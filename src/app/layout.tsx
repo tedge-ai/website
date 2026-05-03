@@ -17,7 +17,7 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "tedge.ai — AI-Powered Trading Intelligence",
   description:
-    "Smart Market Structure analysis powered by AI. Real-time charts, automated analysis, trade management, and alerts.",
+    "Your AI Trading Edge — Analyze, draw, and trade with AI. Real-time charts, broker connected, trade management, and alerts.",
 };
 
 export default function RootLayout({
