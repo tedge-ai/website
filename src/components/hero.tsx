@@ -28,7 +28,7 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="/coming-soon"
+            href="https://app.tedge.ai"
             className="bg-gold text-ink hover:bg-gold/80 font-semibold text-base px-8 h-12 rounded-lg inline-flex items-center justify-center transition-colors"
           >
             Try Free &mdash; 10 Messages

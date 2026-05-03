@@ -22,21 +22,20 @@ const TIERS = [
       { label: "MT5 / cTrader", value: CROSS },
       { label: "Active alerts", value: "3" },
       { label: "Money Management", value: "Presets" },
-      { label: "Trade replay", value: CROSS },
       { label: "Push / Telegram", value: CROSS },
       { label: "Support", value: "Community" },
     ],
   },
   {
     name: "Standard",
-    price: "49",
+    price: "49.90",
     period: "/mo",
-    description: "For active traders",
-    subtitle: "20 messages/day, 100/week",
+    description: "For traders who integrate AI into their daily routine",
+    subtitle: "20 messages/day — AI costs included",
     cta: "Subscribe",
     highlight: true,
     features: [
-      { label: "AI Agent messages", value: "20/day, 100/week" },
+      { label: "AI Agent messages", value: "20/day, 60/week" },
       { label: "All symbols", value: CHECK },
       { label: "All agent tools", value: CHECK },
       { label: "Market Structure", value: CHECK },
@@ -44,17 +43,16 @@ const TIERS = [
       { label: "MT5 / cTrader", value: CHECK },
       { label: "Active alerts", value: "20" },
       { label: "Money Management", value: "Presets + Custom" },
-      { label: "Trade replay", value: CHECK },
       { label: "Push / Telegram", value: CHECK },
       { label: "Support", value: "Email" },
     ],
   },
   {
-    name: "BYOK",
-    price: "19",
+    name: "Bring Your Own Key",
+    price: "19.90",
     period: "/mo",
-    description: "Bring Your Own Key",
-    subtitle: "Unlimited — your own AI API key",
+    description: "For advanced traders with intensive AI usage",
+    subtitle: "Unlimited — your own Anthropic API key",
     cta: "Subscribe",
     highlight: false,
     features: [
@@ -64,9 +62,8 @@ const TIERS = [
       { label: "Market Structure", value: CHECK },
       { label: "Mode", value: "Live + Demo" },
       { label: "MT5 / cTrader", value: CHECK },
-      { label: "Active alerts", value: "Unlimited" },
+      { label: "Active alerts", value: "20" },
       { label: "Money Management", value: "Presets + Custom" },
-      { label: "Trade replay", value: CHECK },
       { label: "Push / Telegram", value: CHECK },
       { label: "Support", value: "Email" },
     ],
@@ -76,7 +73,7 @@ const TIERS = [
 function FeatureValue({ value }: { value: string }) {
   if (value === CHECK) return <span className="text-jade font-bold">{CHECK}</span>;
   if (value === CROSS) return <span className="text-mist/30">{CROSS}</span>;
-  if (value === "Unlimited" || value === "Your choice")
+  if (value === "Unlimited")
     return <span className="text-gold font-semibold text-xs">{value}</span>;
   return <span className="text-snow/70 text-xs">{value}</span>;
 }
@@ -138,7 +135,7 @@ export function Pricing() {
                 </ul>
 
                 <a
-                  href="/coming-soon"
+                  href="https://app.tedge.ai"
                   className={`w-full font-semibold text-sm h-9 rounded-lg inline-flex items-center justify-center transition-colors ${
                     tier.highlight
                       ? "bg-gold text-ink hover:bg-gold/80"
@@ -155,9 +152,9 @@ export function Pricing() {
         {/* BYOK explanation */}
         <div className="mt-12 text-center">
           <p className="text-sm text-mist">
-            <span className="text-snow font-semibold">BYOK</span> &mdash; Bring
-            Your Own Key. Use your own AI API key for unlimited agent usage.
-            You pay for AI costs directly, tedge.ai charges only for
+            <span className="text-snow font-semibold">Bring Your Own Key</span> &mdash; Use
+            your own Anthropic API key for unlimited agent usage.
+            AI costs are billed directly by Anthropic. tedge.ai charges only for
             the platform and broker infrastructure.
           </p>
         </div>

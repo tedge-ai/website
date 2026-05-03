@@ -6,52 +6,52 @@ const FAQS = [
   {
     question: "What does the AI agent do exactly?",
     answer:
-      "The AI agent is your trading edge. You chat with it in natural language — ask it to analyze a chart, draw supply & demand zones, identify order blocks, calculate your position sizing, or prepare a trade. It uses real-time market data, takes screenshots of your chart, and draws directly on it. It can also set price alerts and scan multiple markets for you.",
+      "The AI agent is your trading assistant. You chat with it in natural language — ask it to analyze a chart, draw key zones and levels, add indicators, calculate position sizing, or prepare a trade. It uses real-time market data, draws directly on your chart, and can manage alerts and trades for you.",
   },
   {
     question: "What are the 10 free messages?",
     answer:
-      "When you sign up, you get 10 AI messages to try the full platform — same AI model, same tools as paid plans. That's enough for 2-3 complete chart analyses with drawings and setups. No credit card required.",
+      "When you sign up, you get 10 AI messages to try the full platform — same AI model, same tools as paid plans. That's enough for 2-3 complete analyses with drawings and setups. No credit card required.",
   },
   {
     question: "What's the difference between Standard and BYOK?",
     answer:
-      "Standard (49\u20ac/mo) includes 20 AI messages per day with our proprietary AI model. BYOK (19\u20ac/mo) lets you use your own AI API key for unlimited messages — you pay for AI costs directly. Both include full broker access, all tools, and all features. BYOK is ideal for power users who send many messages daily.",
+      "Standard (49.90\u20ac/mo) includes 20 AI messages per day with AI costs included in your subscription. BYOK (19.90\u20ac/mo) lets you use your own Anthropic API key for unlimited messages — AI costs are billed directly by Anthropic. Both include full broker access, all tools, and all features.",
   },
   {
     question: "What is BYOK (Bring Your Own Key)?",
     answer:
-      "BYOK means you provide your own AI API key. You get unlimited AI agent usage and pay for AI costs directly. tedge.ai charges 19\u20ac/mo for the platform infrastructure and broker connectivity.",
+      "BYOK means you provide your own Anthropic API key. You get unlimited AI agent usage and pay for AI costs directly to Anthropic. tedge.ai charges 19.90\u20ac/mo for the platform, broker connectivity, and all features.",
   },
   {
     question: "What happens when I reach my daily message limit?",
     answer:
-      "You'll be blocked until the next day. Your weekly limit (100 messages/week) prevents overuse across the week. Your positions, alerts, and charts remain fully functional — you just can't send new messages to the AI agent until the quota resets.",
+      "The AI agent will let you know and suggest upgrading. Your positions, alerts, and charts remain fully functional — you just can't send new messages to the agent until the quota resets. Weekly limit prevents overuse across the week.",
   },
   {
     question: "What is Market Structure and is it free?",
     answer:
-      "Market Structure is our real-time trend detection system. It identifies Break of Structure (BOS), Change of Character (ChoCh), and swing points directly on your chart — updated live with every candle. It's completely free on all plans. It replaces traditional trend indicators with objective, algorithmic structure analysis.",
+      "Market Structure is our real-time trend detection system. It identifies Break of Structure (BOS), Change of Character (ChoCh), and swing points directly on your chart — updated live with every candle. It's free on all plans.",
   },
   {
     question: "Which brokers are supported?",
     answer:
-      "tedge.ai supports cTrader (direct cloud connection) and MT5 (via our lightweight EdgeBridge connector). We've tested with IC Markets, BlackBull Markets, OANDA, and Pepperstone. The AI agent can execute trades through your connected broker.",
+      "tedge.ai supports cTrader (direct cloud connection) and MetaTrader 5 (via tedge connect, our lightweight Windows connector). Compatible with IC Markets, BlackBull Markets, Pepperstone, FxPro, Axiory, and more.",
+  },
+  {
+    question: "Can I use tedge.ai on mobile?",
+    answer:
+      "Yes! tedge.ai is a PWA — add it to your home screen for a native-like experience. Charts, agent, positions, and alerts are all accessible from mobile. Landscape mode gives you a full-screen chart. Drawings and chat history sync between desktop and mobile.",
   },
   {
     question: "Can I use tedge.ai with a demo account?",
     answer:
-      "Yes! The Free plan is demo-only, perfect for evaluating the platform. You get full access to the AI agent (10 messages), Market Structure, charting tools, and money management. When you're ready to trade live, upgrade to Standard or BYOK to connect your broker.",
+      "Yes! The Free plan includes a virtual demo account to practice trading. You get full access to the AI agent (10 messages), Market Structure, charting tools, and money management. Upgrade to Standard or BYOK to connect your real broker.",
   },
   {
     question: "What can the AI agent draw on my chart?",
     answer:
-      "The agent can draw supply/demand zones (rectangles with labels), horizontal price levels, support/resistance lines, and entry/SL/TP markers. It can also clear all drawings and redraw updated levels. All drawings are labeled and persist on your chart.",
-  },
-  {
-    question: "How does Money Management work?",
-    answer:
-      "You define risk profiles (Prudent, Standard, Aggressive, or custom). When the AI agent prepares a trade, it calculates optimal lot sizing based on your profile, account balance, and the distance to your stop loss. You can also ask the agent directly: \"what's my sizing for this setup?\"",
+      "The agent can draw zones (supply/demand, order blocks), horizontal levels, support/resistance lines, and trade setups with entry/SL/TP markers. It can also recommend and apply indicators. All drawings are labeled, can be locked, and sync across your devices.",
   },
 ];
 

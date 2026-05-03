@@ -7,10 +7,10 @@ const FEATURES = [
     badge: "AI Agent",
     title: "Your AI Trading Edge",
     description:
-      "Ask the agent to analyze any chart with any strategy — S&D, SMC, ICT, price action, or your own methodology. It draws zones, key levels, and setups directly on your chart, and prepares trades with entry, SL, and TP.",
+      "Ask the agent to analyze any chart with any strategy — price action, supply & demand, ICT, SMC, or your own methodology. It enriches your chart with zones, key levels, indicators, and prepares trades with entry, SL, and TP.",
     highlights: [
       "Multi-timeframe analysis on any symbol, any strategy",
-      "Draws zones and levels directly on your chart",
+      "Draws zones, levels, and indicators directly on your chart",
       "Prepares trades with pre-filled execution dialog",
       "Scans multiple markets to find the best setups",
     ],
@@ -21,12 +21,12 @@ const FEATURES = [
     badge: "Live Charts",
     title: "Professional Charting, Real-Time Data",
     description:
-      "21 timeframes, drawing tools, customizable indicators, and automatic Market Structure overlay. Powered by TradingView Lightweight Charts.",
+      "21 timeframes, drawing tools, customizable indicators, and automatic Market Structure overlay. Synced across all your devices.",
     highlights: [
       "All timeframes including M2, M3, H6, H12",
       "Trendlines, Fibonacci, channels, rectangles",
       "EMA, SMA, RSI, ADX with full customization",
-      "Infinite scroll history",
+      "Drawings synced between desktop and mobile",
     ],
     video: "/videos/charts.mp4",
     reverse: true,
@@ -35,7 +35,7 @@ const FEATURES = [
     badge: "Broker Connected",
     title: "MT5 & cTrader, Live Execution",
     description:
-      "Connect your MetaTrader 5 via EdgeBridge or your cTrader account directly. Get live prices, track positions in real-time, and execute trades from the platform or through the AI agent.",
+      "Connect your MetaTrader 5 via tedge connect or your cTrader account directly. Get live prices, track positions in real-time, and execute trades from the platform or through the AI agent.",
     highlights: [
       "Live bid/ask from your broker",
       "All your broker's symbols available",
@@ -60,17 +60,17 @@ const FEATURES = [
     reverse: true,
   },
   {
-    badge: "Alerts",
-    title: "Never Miss a Setup",
+    badge: "Mobile & Desktop",
+    title: "Trade Anywhere, Seamlessly",
     description:
-      "Set price alerts on key levels — manually or through the AI agent. Get push notifications when price reaches your zones.",
+      "A full PWA experience — add tedge.ai to your home screen for native-like usage. Analyze on desktop, review on mobile. Chat history and drawings stay in sync across devices.",
     highlights: [
-      "Price alerts with push notifications",
-      "Agent creates alerts automatically after analysis",
-      "Cross up, cross down, above, below conditions",
-      "Mobile notifications via PWA",
+      "Responsive charts with landscape fullscreen mode",
+      "Agent accessible from mobile bottom tabs",
+      "Positions, alerts, and trades on the go",
+      "Desktop-mobile sync for drawings and conversations",
     ],
-    video: "/videos/alerts.mp4",
+    video: "/videos/mobile.mp4",
     reverse: false,
   },
 ];
