@@ -39,11 +39,6 @@ const FAQS = [
       "tedge.ai supports cTrader (direct cloud connection) and MetaTrader 5 (via tedge connect, our lightweight Windows connector). Compatible with IC Markets, BlackBull Markets, Pepperstone, FxPro, Axiory, and more.",
   },
   {
-    question: "Can I use tedge.ai on mobile?",
-    answer:
-      "Yes! tedge.ai is a PWA — add it to your home screen for a native-like experience. Charts, agent, positions, and alerts are all accessible from mobile. Landscape mode gives you a full-screen chart. Drawings and chat history sync between desktop and mobile.",
-  },
-  {
     question: "Can I use tedge.ai with a demo account?",
     answer:
       "Yes! The Free plan includes a virtual demo account to practice trading. You get full access to the AI agent (10 messages), Market Structure, charting tools, and money management. Upgrade to Standard or BYOK to connect your real broker.",

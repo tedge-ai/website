@@ -60,17 +60,17 @@ const FEATURES = [
     reverse: true,
   },
   {
-    badge: "Mobile & Desktop",
-    title: "Trade Anywhere, Seamlessly",
+    badge: "Alerts",
+    title: "Never Miss a Setup",
     description:
-      "A full PWA experience — add tedge.ai to your home screen for native-like usage. Analyze on desktop, review on mobile. Chat history and drawings stay in sync across devices.",
+      "Set price alerts on key levels — manually or through the AI agent. Get notified when price reaches your zones.",
     highlights: [
-      "Responsive charts with landscape fullscreen mode",
-      "Agent accessible from mobile bottom tabs",
-      "Positions, alerts, and trades on the go",
-      "Desktop-mobile sync for drawings and conversations",
+      "Price alerts with push notifications",
+      "Agent creates alerts automatically after analysis",
+      "Cross up, cross down, above, below conditions",
+      "Telegram notifications available",
     ],
-    video: "/videos/mobile.mp4",
+    video: "/videos/alerts.mp4",
     reverse: false,
   },
 ];
