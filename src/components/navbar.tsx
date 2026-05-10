@@ -9,7 +9,7 @@ export function Navbar() {
   const { t, locale, setLocale } = useI18n();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-rim bg-ink/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-rim bg-ink">
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 h-16">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/icon.svg" alt="tedge" width={28} height={28} className="rounded-lg" />
