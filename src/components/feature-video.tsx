@@ -54,7 +54,7 @@ export function FeatureVideo({ src, label }: { src: string; label: string }) {
   return (
     <div
       onClick={() => !failed && setFullscreen(true)}
-      className="relative rounded-xl border border-rim overflow-hidden aspect-[16/10] shadow-2xl shadow-black/40 cursor-pointer group"
+      className="relative rounded-xl border border-rim overflow-hidden aspect-[3010/1738] shadow-2xl shadow-black/40 cursor-pointer group"
     >
       {!failed && (
         <>
