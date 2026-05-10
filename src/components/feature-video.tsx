@@ -26,7 +26,7 @@ export function FeatureVideo({ src, label }: { src: string; label: string }) {
     <>
       <div
         onClick={() => !failed && setFullscreen(true)}
-        className="relative rounded-xl border border-rim overflow-hidden aspect-[16/10] shadow-2xl shadow-black/40 cursor-pointer group"
+        className="relative rounded-xl overflow-hidden aspect-[16/10] cursor-pointer group"
       >
         {!failed && (
           <>
@@ -36,12 +36,13 @@ export function FeatureVideo({ src, label }: { src: string; label: string }) {
               loop
               muted
               playsInline
-              className="w-full h-full object-contain"
+              className="w-full h-full"
+              style={{ objectFit: 'contain' }}
               onError={() => setFailed(true)}
             />
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <div className="w-10 h-10 rounded-full bg-black/60 flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="w-8 h-8 rounded-full bg-black/50 flex items-center justify-center">
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5" />
                 </svg>
               </div>
@@ -60,14 +61,14 @@ export function FeatureVideo({ src, label }: { src: string; label: string }) {
         )}
       </div>
 
-      {/* Fullscreen modal — rendered via portal to escape stacking contexts */}
+      {/* Fullscreen modal */}
       {fullscreen && mounted && createPortal(
         <div
-          className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center p-6 cursor-pointer"
+          style={{ position: 'fixed', inset: 0, zIndex: 99999, background: 'rgba(0,0,0,0.95)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', cursor: 'pointer', isolation: 'isolate' }}
           onClick={() => setFullscreen(false)}
         >
           <button
-            className="absolute top-4 right-4 text-white/70 hover:text-white text-3xl font-light z-10"
+            style={{ position: 'absolute', top: '16px', right: '16px', color: 'rgba(255,255,255,0.7)', fontSize: '28px', fontWeight: 300, zIndex: 10, background: 'none', border: 'none', cursor: 'pointer' }}
             onClick={() => setFullscreen(false)}
           >
             ✕
@@ -78,7 +79,7 @@ export function FeatureVideo({ src, label }: { src: string; label: string }) {
             loop
             muted
             playsInline
-            className="max-w-[90vw] max-h-[90vh] rounded-lg"
+            style={{ maxWidth: '90vw', maxHeight: '90vh', borderRadius: '8px' }}
             onClick={(e) => e.stopPropagation()}
           />
         </div>,
