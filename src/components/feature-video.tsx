@@ -1,10 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 export function FeatureVideo({ src, label }: { src: string; label: string }) {
   const [failed, setFailed] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
+
+  // Close on Escape
+  useEffect(() => {
+    if (!fullscreen) return;
+    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') setFullscreen(false); };
+    document.addEventListener('keydown', handler);
+    return () => document.removeEventListener('keydown', handler);
+  }, [fullscreen]);
 
   return (
     <>
@@ -20,7 +32,7 @@ export function FeatureVideo({ src, label }: { src: string; label: string }) {
               loop
               muted
               playsInline
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain bg-ink2"
               onError={() => setFailed(true)}
             />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
@@ -44,14 +56,14 @@ export function FeatureVideo({ src, label }: { src: string; label: string }) {
         )}
       </div>
 
-      {/* Fullscreen modal */}
-      {fullscreen && (
+      {/* Fullscreen modal — rendered via portal to escape stacking contexts */}
+      {fullscreen && mounted && createPortal(
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 cursor-pointer"
+          className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center p-6 cursor-pointer"
           onClick={() => setFullscreen(false)}
         >
           <button
-            className="absolute top-4 right-4 text-white/70 hover:text-white text-2xl font-light"
+            className="absolute top-4 right-4 text-white/70 hover:text-white text-3xl font-light z-10"
             onClick={() => setFullscreen(false)}
           >
             ✕
@@ -62,10 +74,11 @@ export function FeatureVideo({ src, label }: { src: string; label: string }) {
             loop
             muted
             playsInline
-            className="max-w-full max-h-full rounded-lg"
+            className="max-w-[90vw] max-h-[90vh] rounded-lg"
             onClick={(e) => e.stopPropagation()}
           />
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
