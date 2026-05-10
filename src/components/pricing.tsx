@@ -22,7 +22,6 @@ function FeatureValue({ value }: { value: string }) {
 
 export function Pricing() {
   const { t, locale } = useI18n();
-  const formUrl = locale === 'en' ? 'https://tally.so/r/yPjyr4' : 'https://tally.so/r/2E1kYp';
 
   return (
     <section id="pricing" className="py-24 md:py-32">
@@ -74,18 +73,16 @@ export function Pricing() {
             </ul>
 
             <a
-              href={formUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://app.tedge.ai"
               className="w-full max-w-xs mx-auto font-semibold text-sm h-11 rounded-lg inline-flex items-center justify-center bg-gold text-ink hover:bg-gold/80 transition-colors"
             >
-              {locale === 'en' ? 'Join the Beta' : 'Rejoindre la Bêta'}
+              {locale === 'en' ? 'Try it free' : 'Essayer gratuitement'}
             </a>
 
             <p className="text-xs text-mist mt-4">
               {locale === 'en'
-                ? 'Takes 1 minute. We\'ll reach out with your access link.'
-                : 'Inscription en 1 minute. Tu recevras ton lien d\'accès rapidement.'}
+                ? 'No credit card required. Free during beta.'
+                : 'Pas de carte bancaire. Gratuit pendant la bêta.'}
             </p>
           </CardContent>
         </Card>
