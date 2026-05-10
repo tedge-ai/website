@@ -137,6 +137,12 @@ html.light {
   }
   html {
     @apply font-sans;
+    color-scheme: only light;
+  }
+  video {
+    filter: none !important;
+    -webkit-filter: none !important;
+    color-scheme: only light;
   }
   html.dark {
     background-color: #06080f;
