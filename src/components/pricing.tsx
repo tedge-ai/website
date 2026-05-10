@@ -21,135 +21,74 @@ function FeatureValue({ value }: { value: string }) {
 }
 
 export function Pricing() {
-  const { t } = useI18n();
-
-  const TIERS = [
-    {
-      nameKey: 'freeName', price: '0', period: '',
-      descKey: 'freeDesc', subKey: 'freeSub', ctaKey: 'freeCta',
-      highlight: false,
-      features: [
-        { labelKey: 'pAiMessages', value: '10 (one-time)' },
-        { labelKey: 'pAllSymbols', value: CHECK },
-        { labelKey: 'pAllTools', value: CHECK },
-        { labelKey: 'pMarketStructure', value: CHECK },
-        { labelKey: 'pMode', value: 'modeDemo' },
-        { labelKey: 'pBroker', value: CROSS },
-        { labelKey: 'pAlerts', value: '3' },
-        { labelKey: 'pMM', value: 'presets' },
-        { labelKey: 'pNotifications', value: CROSS },
-        { labelKey: 'pSupport', value: 'community' },
-      ],
-    },
-    {
-      nameKey: 'standardName', price: '49.90', period: '/mo',
-      descKey: 'standardDesc', subKey: 'standardSub', ctaKey: 'standardCta',
-      highlight: true,
-      features: [
-        { labelKey: 'pAiMessages', value: '20/day, 60/week' },
-        { labelKey: 'pAllSymbols', value: CHECK },
-        { labelKey: 'pAllTools', value: CHECK },
-        { labelKey: 'pMarketStructure', value: CHECK },
-        { labelKey: 'pMode', value: 'modeLiveDemo' },
-        { labelKey: 'pBroker', value: CHECK },
-        { labelKey: 'pAlerts', value: '20' },
-        { labelKey: 'pMM', value: 'presetsCustom' },
-        { labelKey: 'pNotifications', value: CHECK },
-        { labelKey: 'pSupport', value: 'email' },
-      ],
-    },
-    {
-      nameKey: 'byokName', price: '19.90', period: '/mo',
-      descKey: 'byokDesc', subKey: 'byokSub', ctaKey: 'byokCta',
-      highlight: false,
-      features: [
-        { labelKey: 'pAiMessages', value: 'unlimited' },
-        { labelKey: 'pAllSymbols', value: CHECK },
-        { labelKey: 'pAllTools', value: CHECK },
-        { labelKey: 'pMarketStructure', value: CHECK },
-        { labelKey: 'pMode', value: 'modeLiveDemo' },
-        { labelKey: 'pBroker', value: CHECK },
-        { labelKey: 'pAlerts', value: '20' },
-        { labelKey: 'pMM', value: 'presetsCustom' },
-        { labelKey: 'pNotifications', value: CHECK },
-        { labelKey: 'pSupport', value: 'email' },
-      ],
-    },
-  ];
+  const { t, locale } = useI18n();
+  const formUrl = locale === 'en' ? 'https://tally.so/r/yPjyr4' : 'https://tally.so/r/2E1kYp';
 
   return (
     <section id="pricing" className="py-24 md:py-32">
-      <div className="mx-auto max-w-5xl px-6">
-        <div className="text-center mb-16">
+      <div className="mx-auto max-w-3xl px-6">
+        <div className="text-center mb-12">
+          <Badge className="bg-gold/20 text-gold border-gold/30 mb-4">
+            {locale === 'en' ? 'Beta Program' : 'Programme Bêta'}
+          </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-snow mb-4">
-            {t('pricingTitle')}
+            {locale === 'en' ? 'Free early access' : 'Accès anticipé gratuit'}
           </h2>
           <p className="text-mist text-lg max-w-2xl mx-auto">
-            {t('pricingSubtitle')}
+            {locale === 'en'
+              ? 'tedge.ai is currently in beta. Join the first testers and get free access in exchange for your feedback.'
+              : 'tedge.ai est actuellement en bêta. Rejoins les premiers testeurs et bénéficie d\'un accès gratuit en échange de ton feedback.'}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {TIERS.map((tier) => (
-            <Card
-              key={tier.nameKey}
-              className={`relative overflow-visible bg-ink2 flex flex-col ${
-                tier.highlight
-                  ? "border-gold/40 shadow-[0_0_30px_rgba(201,151,58,0.1)]"
-                  : "border-rim"
-              }`}
+        <Card className="bg-ink2 border-gold/30 shadow-[0_0_30px_rgba(201,151,58,0.1)]">
+          <CardContent className="p-8 text-center">
+            <h3 className="text-2xl font-bold text-snow mb-2">
+              {locale === 'en' ? 'Beta Tester' : 'Bêta-testeur'}
+            </h3>
+            <div className="mt-2 mb-6">
+              <span className="text-4xl font-bold text-snow">0&euro;</span>
+            </div>
+
+            <ul className="space-y-2 text-left max-w-sm mx-auto mb-8">
+              {(locale === 'en' ? [
+                'AI agent with ICT/SMC analysis',
+                'Market Structure overlay',
+                'Multi-timeframe chart',
+                'Demo trading with MM',
+                'Broker connection (MT5, cTrader)',
+                'Price alerts',
+              ] : [
+                'Agent IA avec analyse ICT/SMC',
+                'Overlay Market Structure',
+                'Graphique multi-timeframe',
+                'Trading demo avec Money Management',
+                'Connexion broker (MT5, cTrader)',
+                'Alertes prix',
+              ]).map((feat) => (
+                <li key={feat} className="flex items-center gap-2 text-sm">
+                  <span className="text-jade font-bold">{CHECK}</span>
+                  <span className="text-snow/80">{feat}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href={formUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full max-w-xs mx-auto font-semibold text-sm h-11 rounded-lg inline-flex items-center justify-center bg-gold text-ink hover:bg-gold/80 transition-colors"
             >
-              {tier.highlight && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-ink font-semibold text-xs">
-                  {t('recommended')}
-                </Badge>
-              )}
-              <CardContent className="p-6 flex flex-col flex-1">
-                <h3 className="text-lg font-semibold text-snow">{t(tier.nameKey)}</h3>
-                <p className="text-xs text-mist mt-1">{t(tier.descKey)}</p>
+              {locale === 'en' ? 'Join the Beta' : 'Rejoindre la Bêta'}
+            </a>
 
-                <div className="mt-4 mb-1">
-                  <span className="text-4xl font-bold text-snow">
-                    {tier.price}&euro;
-                  </span>
-                  <span className="text-sm text-mist">{tier.period}</span>
-                </div>
-                <p className="text-xs text-gold font-mono mb-6">
-                  {t(tier.subKey)}
-                </p>
-
-                <ul className="space-y-2 flex-1 mb-6">
-                  {tier.features.map((f) => (
-                    <li
-                      key={f.labelKey}
-                      className="flex items-center justify-between gap-2 text-xs py-0.5"
-                    >
-                      <span className="text-mist">{t(f.labelKey)}</span>
-                      <FeatureValue value={f.value} />
-                    </li>
-                  ))}
-                </ul>
-
-                <a
-                  href="https://app.tedge.ai"
-                  className={`w-full font-semibold text-sm h-9 rounded-lg inline-flex items-center justify-center transition-colors ${
-                    tier.highlight
-                      ? "bg-gold text-ink hover:bg-gold/80"
-                      : "bg-glass2 text-snow hover:bg-white/10"
-                  }`}
-                >
-                  {t(tier.ctaKey)}
-                </a>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <p className="text-sm text-mist">
-            <span className="text-snow font-semibold">Bring Your Own Key</span> &mdash; {t('byokExplanation')}
-          </p>
-        </div>
+            <p className="text-xs text-mist mt-4">
+              {locale === 'en'
+                ? 'Takes 1 minute. We\'ll reach out with your access link.'
+                : 'Inscription en 1 minute. Tu recevras ton lien d\'accès rapidement.'}
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
